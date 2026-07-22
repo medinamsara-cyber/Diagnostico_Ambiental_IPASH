@@ -1,0 +1,219 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="utf-8">
+
+<title>
+Diagnóstico Ambiental de Pasivos Hidrocarburíferos en Piura
+</title>
+
+<style>
+
+body{
+    font-family:Arial,sans-serif;
+    margin:0;
+    background:#f5f5f5;
+    color:#222;
+    line-height:1.6;
+}
+
+header{
+    background:#1f4e79;
+    color:white;
+    padding:30px;
+}
+
+header h1{
+    margin:0;
+}
+
+.seccion{
+    max-width:1400px;
+    margin:auto;
+    margin-top:20px;
+    background:white;
+    padding:25px;
+    border-radius:8px;
+}
+
+iframe{
+    width:100%;
+    height:700px;
+    border:none;
+}
+
+img{
+    width:100%;
+    border-radius:8px;
+}
+
+footer{
+    padding:30px;
+    text-align:center;
+    color:gray;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>
+Diagnóstico Ambiental de Pasivos Hidrocarburíferos en Piura
+</h1>
+
+<p>
+Integración de monitoreos ambientales, análisis normativo y cobertura vegetal mediante técnicas de ciencia de datos
+</p>
+
+<p>
+Ingrid Rabitsch (Perú) | María Sara Medina (Argentina)
+</p>
+
+</header>
+
+<div class="seccion">
+
+<h2>Introducción</h2>
+
+<p>
+Los pasivos ambientales del sector hidrocarburífero representan sitios con contaminación histórica que afecta matrices como suelo, agua y sedimentos. La presencia de hidrocarburos puede generar degradación ambiental y modificar las características de los ecosistemas.
+</p>
+
+<p>
+La información utilizada proviene de la base IPASH del OEFA y permite analizar la distribución espacial de la contaminación, su evolución temporal y su posible relación con la cobertura vegetal observada mediante sensores remotos.
+</p>
+
+</div>
+
+<div class="seccion">
+
+<h2>Área de estudio</h2>
+
+<p>
+El área de estudio corresponde al departamento de Piura, ubicado en la costa norte del Perú. Esta región concentra una de las actividades hidrocarburíferas más antiguas y relevantes del país, incluyendo la Refinería de Talara y numerosas zonas históricamente asociadas a extracción y transporte de petróleo.
+</p>
+
+map_piura.html</iframe>
+
+</div>
+
+<div class="seccion">
+
+<h2>Distribución espacial de hidrocarburos</h2>
+
+<p>
+Se construyó un indicador denominado HTP integrado para homogeneizar los diferentes esquemas analíticos utilizados en las distintas matrices ambientales y campañas de monitoreo.
+</p>
+
+fig_htp.html</iframe>
+
+</div>
+
+<div class="seccion">
+
+<h2>Identificación de hotspots</h2>
+
+<p>
+Los resultados de monitoreo mostraron una distribución espacial altamente heterogénea de los hidrocarburos. Para identificar focos de contaminación se utilizaron percentiles y la regla de Tukey para detección de valores extremos.
+</p>
+
+<p>
+Se adoptó el percentil 90 como criterio operativo para la delimitación de hotspots.
+</p>
+
+<ul>
+<li>Suelo: HTP integrado > 26.743 mg/kg</li>
+<li>Agua: HTP integrado > 1.586 mg/L</li>
+</ul>
+
+</div>
+
+<div class="seccion">
+
+<h2>Comparación con estándares normativos</h2>
+
+htp_suelo.png
+
+<br><br>
+
+htp_agua.png
+
+</div>
+
+<div class="seccion">
+
+<h2>Cobertura vegetal - NDVI</h2>
+
+<p>
+Se analizó la evolución temporal de la cobertura vegetal mediante el Índice de Vegetación de Diferencia Normalizada (NDVI) a partir de imágenes Landsat correspondientes a distintos hitos temporales.
+</p>
+
+ndvi_boxplot.png
+
+</div>
+
+<div class="seccion">
+
+<h2>Cobertura del suelo (MapBiomas)</h2>
+
+<p>
+La información de MapBiomas Perú permitió complementar el análisis de vegetación y contextualizar las variaciones observadas en el NDVI.
+</p>
+
+<iframe src="mapbiomas.html"></iframe>
+
+</div>
+
+<div class="seccion">
+
+<h2>Relación entre contaminación y vegetación</h2>
+
+<p>
+Se evaluó la posible relación entre las concentraciones de hidrocarburos y los valores de NDVI asociados a los distintos períodos de monitoreo.
+</p>
+
+correlacion_ndvi_htp.png
+
+</div>
+
+<div class="seccion">
+
+<h2>Conclusiones generales</h2>
+
+<ul>
+<li>Los hidrocarburos totales del petróleo constituyen el principal contaminante identificado en las matrices ambientales analizadas.</li>
+<li>La mayoría de los puntos monitoreados y de los principales focos de contaminación se concentran dentro del departamento de Piura.</li>
+<li>La matriz suelo presentó las mayores concentraciones y la mayor frecuencia de excedencias normativas.</li>
+<li>La interpretación de las excedencias en agua depende significativamente del estándar regulatorio utilizado.</li>
+<li>Los análisis satelitales mostraron cambios temporales en la cobertura vegetal.</li>
+<li>No se observó una relación lineal fuerte entre las concentraciones de hidrocarburos y el NDVI.</li>
+</ul>
+
+</div>
+
+<div class="seccion">
+
+<h2>Recomendaciones</h2>
+
+<p>
+La metodología desarrollada puede extenderse a otras regiones petroleras del Perú donde existan registros ambientales comparables. Entre las zonas de interés se encuentran la región Lima y el Callao, donde opera la Refinería La Pampilla, así como otras áreas históricamente vinculadas a la explotación hidrocarburífera.
+</p>
+
+</div>
+
+<footer>
+
+Dashboard generado con Python, Plotly, Earth Engine y GitHub Pages.
+
+</footer>
+
+</body>
+
+</html>
