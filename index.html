@@ -1,6 +1,7 @@
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,9 +13,7 @@
 :root{
     --primary:#0f4c5c;
     --secondary:#2d6a4f;
-    --light:#f8f9fa;
     --text:#222;
-    --border:#dce3e8;
 }
 
 *{
@@ -33,24 +32,23 @@ body{
 header{
     background:linear-gradient(135deg,#0f4c5c,#1b4332);
     color:white;
-    padding:70px 20px;
     text-align:center;
+    padding:70px 20px;
 }
 
 header h1{
     font-size:2.6rem;
-    margin-bottom:20px;
+    margin-bottom:15px;
 }
 
 header p{
     font-size:1.15rem;
-    max-width:1100px;
+    max-width:1000px;
     margin:auto;
 }
 
 .authors{
     margin-top:25px;
-    font-size:1rem;
 }
 
 .container{
@@ -61,17 +59,17 @@ header p{
 
 section{
     background:white;
-    padding:40px;
     margin-bottom:35px;
-    border-radius:14px;
+    padding:40px;
+    border-radius:15px;
     box-shadow:0 2px 10px rgba(0,0,0,0.08);
 }
 
 h2{
     color:var(--primary);
     margin-bottom:20px;
-    border-bottom:3px solid #e9ecef;
     padding-bottom:10px;
+    border-bottom:3px solid #e9ecef;
 }
 
 p{
@@ -86,7 +84,6 @@ iframe{
     border-radius:10px;
     margin-top:20px;
     margin-bottom:20px;
-    background:white;
 }
 
 .image-container{
@@ -95,10 +92,19 @@ iframe{
 }
 
 .image-container img{
-    width:100%;
-    max-width:1000px;
+    display:block;
+    margin:auto;
+    max-width:100%;
+    max-height:700px;
     border-radius:10px;
-    box-shadow:0 2px 8px rgba(0,0,0,.15);
+    box-shadow:0 3px 10px rgba(0,0,0,0.15);
+}
+
+.highlight{
+    background:#eef7f1;
+    border-left:6px solid var(--secondary);
+    padding:20px;
+    margin-top:20px;
 }
 
 ul{
@@ -109,14 +115,6 @@ footer{
     text-align:center;
     padding:40px;
     color:#666;
-}
-
-.highlight{
-    background:#eef7f1;
-    border-left:6px solid var(--secondary);
-    padding:18px;
-    margin-top:20px;
-    margin-bottom:20px;
 }
 
 </style>
@@ -145,11 +143,11 @@ Integración de monitoreos ambientales, análisis normativo y cobertura vegetal 
 <h2>1. Introducción</h2>
 
 <p>
-Los pasivos ambientales hidrocarburíferos representan una de las principales fuentes de riesgo para los ecosistemas costeros y desérticos de la región Piura. La permanencia de contaminantes derivados del petróleo puede generar efectos acumulativos sobre el suelo, el agua y la cobertura vegetal.
+Los pasivos ambientales hidrocarburíferos representan una fuente relevante de riesgo para los ecosistemas de la región Piura. La presencia histórica de actividades petroleras ha generado la necesidad de evaluar tanto la distribución de contaminantes como sus posibles efectos sobre el ambiente.
 </p>
 
 <p>
-Este reporte integra información ambiental, análisis exploratorio de datos, evaluación normativa y herramientas geoespaciales para caracterizar la distribución de contaminantes y sus posibles efectos ecológicos.
+Este dashboard integra información geoespacial, monitoreos ambientales, análisis normativo y herramientas de ciencia de datos para apoyar una evaluación integral de la problemática.
 </p>
 
 </section>
@@ -159,7 +157,7 @@ Este reporte integra información ambiental, análisis exploratorio de datos, ev
 <h2>2. Área de estudio</h2>
 
 <p>
-El área evaluada corresponde a zonas con antecedentes de actividades hidrocarburíferas en la región Piura. El análisis incorpora información espacial de puntos de monitoreo, variables ambientales y contexto territorial.
+El área de estudio corresponde a zonas intervenidas por actividades hidrocarburíferas en la región Piura.
 </p>
 
 map_piura.html</iframe>
@@ -171,7 +169,7 @@ map_piura.html</iframe>
 <h2>3. Distribución espacial de hidrocarburos</h2>
 
 <p>
-La distribución espacial de hidrocarburos totales del petróleo (HTP) permite identificar patrones de concentración y posibles áreas con mayor presión ambiental.
+La distribución espacial de hidrocarburos totales del petróleo permite identificar sectores con mayores concentraciones y posibles patrones territoriales.
 </p>
 
 fig_htp.html</iframe>
@@ -183,7 +181,7 @@ fig_htp.html</iframe>
 <h2>4. Hotspots de hidrocarburos totales del petróleo</h2>
 
 <p>
-Se evaluaron diferentes enfoques estadísticos para identificar concentraciones anómalas de hidrocarburos dentro del conjunto de datos.
+Se aplicaron diferentes enfoques estadísticos para detectar concentraciones anómalas dentro de la distribución de datos observada.
 </p>
 
 <div class="image-container">
@@ -195,7 +193,7 @@ Se evaluaron diferentes enfoques estadísticos para identificar concentraciones 
 </div>
 
 <div class="highlight">
-El criterio finalmente adoptado para la identificación de hotspots fue el Percentil 90, por ser una referencia robusta para detectar concentraciones elevadas dentro de la distribución observada.
+Se adoptó el Percentil 90 como criterio para la identificación de hotspots debido a su robustez en la detección de valores elevados dentro de la distribución de concentraciones.
 </div>
 
 </section>
@@ -205,7 +203,7 @@ El criterio finalmente adoptado para la identificación de hotspots fue el Perce
 <h2>5. Otros contaminantes evaluados</h2>
 
 <p>
-Además de los hidrocarburos totales del petróleo, el estudio consideró otros parámetros fisicoquímicos relevantes para la evaluación ambiental, permitiendo una caracterización más integral de las condiciones observadas en los sitios de monitoreo.
+Además de los hidrocarburos totales del petróleo, se analizaron otros parámetros fisicoquímicos relevantes para complementar la caracterización ambiental de los sitios evaluados.
 </p>
 
 </section>
@@ -219,7 +217,7 @@ htp_suelo.png
 </div>
 
 <p>
-La comparación con los estándares aplicables para suelo permite evaluar el grado de cumplimiento normativo y detectar posibles excedencias que requieran atención prioritaria.
+Los resultados permiten comparar las concentraciones observadas en suelo con los valores de referencia establecidos por la normativa vigente.
 </p>
 
 <div class="image-container">
@@ -227,7 +225,7 @@ htp_agua.png
 </div>
 
 <p>
-Los resultados obtenidos para agua complementan la evaluación ambiental y permiten contextualizar la magnitud de las concentraciones registradas respecto de los valores de referencia vigentes.
+La evaluación en agua proporciona evidencia complementaria para interpretar la magnitud de los impactos potenciales asociados a la presencia de hidrocarburos.
 </p>
 
 </section>
@@ -237,7 +235,7 @@ Los resultados obtenidos para agua complementan la evaluación ambiental y permi
 <h2>7. Cobertura vegetal y respuesta ecológica</h2>
 
 <p>
-La cobertura vegetal fue analizada mediante indicadores espectrales derivados de teledetección con el objetivo de identificar posibles respuestas ecológicas asociadas a la presencia de contaminantes.
+La respuesta ecológica fue evaluada mediante indicadores de vegetación derivados de imágenes satelitales.
 </p>
 
 <div class="image-container">
@@ -245,7 +243,7 @@ ndvi_boxplot.png
 </div>
 
 <p>
-La distribución de los valores de NDVI permite comparar el comportamiento de la vegetación entre distintas condiciones ambientales y niveles de contaminación.
+La distribución de los valores de NDVI permite examinar posibles diferencias entre sectores con distintas condiciones ambientales.
 </p>
 
 </section>
@@ -255,13 +253,13 @@ La distribución de los valores de NDVI permite comparar el comportamiento de la
 <h2>8. Cobertura del suelo (MapBiomas)</h2>
 
 <p>
-Los productos de MapBiomas proporcionan información detallada sobre cambios y patrones de cobertura del suelo, permitiendo contextualizar los resultados ambientales dentro de una escala territorial más amplia.
+La información de MapBiomas aporta contexto territorial y permite interpretar los resultados ambientales dentro de la dinámica del uso y cobertura del suelo.
 </p>
 
 <iframe src="mapbiomas.html"></iframe>
 
 <p>
-La integración de información de cobertura terrestre facilita la interpretación de los procesos ecológicos y de las posibles presiones antrópicas presentes en el área de estudio.
+La caracterización de la cobertura terrestre complementa la evaluación ambiental mediante una perspectiva regional.
 </p>
 
 </section>
@@ -271,15 +269,12 @@ La integración de información de cobertura terrestre facilita la interpretaci�
 <h2>9. Evaluación de la relación entre HTP y NDVI</h2>
 
 <p>
-Se exploró la posible relación entre las concentraciones de hidrocarburos y el comportamiento de la vegetación mediante análisis correlacional.
+Se exploró la relación entre las concentraciones de hidrocarburos y los indicadores de vegetación.
 </p>
 
 <div class="image-container">
-correlacion_ndvi_htp.png
-</div>
-
-<p>
-La relación observada permite evaluar si existe una tendencia consistente entre contaminación hidrocarburífera y respuesta ecológica medida a través del NDVI.
+<img src="correlacion_ndvi_htp.pngp>
+Los resultados permiten examinar la existencia de asociaciones potenciales entre contaminación hidrocarburífera y respuesta ecológica.
 </p>
 
 </section>
@@ -289,11 +284,11 @@ La relación observada permite evaluar si existe una tendencia consistente entre
 <h2>10. Conclusiones generales</h2>
 
 <ul>
-<li>La integración de datos ambientales y geoespaciales permitió identificar áreas con mayor concentración de hidrocarburos.</li>
-<li>Los análisis espaciales facilitaron la detección de patrones territoriales relevantes.</li>
-<li>La evaluación normativa permitió contextualizar los resultados obtenidos.</li>
-<li>Los indicadores de vegetación aportaron evidencia complementaria sobre la respuesta ecológica.</li>
-<li>La combinación de ciencia de datos y análisis ambiental constituye una herramienta útil para la gestión de pasivos hidrocarburíferos.</li>
+<li>Se identificaron áreas con concentraciones elevadas de hidrocarburos.</li>
+<li>El análisis espacial permitió reconocer patrones territoriales relevantes.</li>
+<li>La comparación normativa facilitó la contextualización de los resultados.</li>
+<li>Los indicadores de vegetación aportaron información ecológica complementaria.</li>
+<li>La integración de ciencia de datos y análisis geoespacial constituye una herramienta útil para la gestión ambiental.</li>
 </ul>
 
 </section>
@@ -303,10 +298,10 @@ La relación observada permite evaluar si existe una tendencia consistente entre
 <h2>11. Recomendaciones</h2>
 
 <ul>
-<li>Fortalecer los programas de monitoreo ambiental en zonas históricamente afectadas por actividades hidrocarburíferas.</li>
-<li>Incorporar análisis multitemporales de cobertura vegetal para evaluar tendencias de recuperación ecológica.</li>
-<li>Replicar la metodología desarrollada en otras regiones petroleras del Perú.</li>
-<li>Aplicar este enfoque en estudios comparativos relacionados con eventos de contaminación de gran escala, incluyendo casos de referencia como la Refinería La Pampilla (Repsol).</li>
+<li>Fortalecer los programas de monitoreo ambiental.</li>
+<li>Incorporar análisis multitemporales mediante sensores remotos.</li>
+<li>Replicar esta metodología en otras regiones petroleras del Perú.</li>
+<li>Aplicar el enfoque en estudios comparativos relacionados con eventos como los asociados a la Refinería La Pampilla (Repsol).</li>
 </ul>
 
 </section>
@@ -314,7 +309,7 @@ La relación observada permite evaluar si existe una tendencia consistente entre
 </div>
 
 <footer>
-Diagnóstico Ambiental de Pasivos Hidrocarburíferos en Piura • Proyecto de Ciencia de Datos Ambientales
+Diagnóstico Ambiental de Pasivos Hidrocarburíferos en Piura · Proyecto de Ciencia de Datos Ambientales
 </footer>
 
 </body>
